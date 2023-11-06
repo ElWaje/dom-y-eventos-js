@@ -6,10 +6,11 @@
     <title>Ejercicio 1: Selección de Elementos por ID</title>
   </head>
   <body>
-    <!-- Escribe tu codigo html aqui -->
+    <p id="mensaje">Este es el contenido original.</p>
 
     <script>
-      // Escribe tu codigo javascript aqui
+      var elemento = document.getElementById('mensaje');
+      elemento.textContent = 'Este es el nuevo contenido.';
     </script>
   </body>
 </html>

@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicio 16: Temporizador de Evento Personalizado</title>
-  </head>
-  <body>
-    <!-- Escribe tu codigo html aqui -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 16: Temporizador de Evento Personalizado</title>
+</head>
+<body>
+  
+  <script>
+    
+    var eventoTemporizador = new CustomEvent('eventoTemporizador', {
+      detail: {
+        mensaje: '¡El temporizador ha finalizado!'
+      }
+    });
 
-    <script>
-      // Escribe tu codigo javascript aqui
-    </script>
-  </body>
+    function manejarEventoTemporizador(e) {
+      alert(e.detail.mensaje);
+    }
+    
+    window.addEventListener('eventoTemporizador', manejarEventoTemporizador);
+    
+    setTimeout(function() {
+      
+      window.dispatchEvent(eventoTemporizador);
+    }, 5000);
+  </script>
+</body>
 </html>

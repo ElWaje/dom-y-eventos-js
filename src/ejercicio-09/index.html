@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejercicio 9: Manipulación de Clases con `classList`</title>
-  </head>
-  <body>
-    <!-- Escribe tu codigo html aqui -->
+    <style>
+        
+        .mi-clase-destacada {
+            color: #fff;
+            background-color: #007bff;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="miElemento">Texto de ejemplo</div>
 
     <script>
-      // Escribe tu codigo javascript aqui
+       
+        var elemento = document.getElementById('miElemento');
+
+        elemento.classList.add('mi-clase-destacada');
     </script>
-  </body>
+
+</body>
 </html>

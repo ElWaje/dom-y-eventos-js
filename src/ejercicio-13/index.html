@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicio 13: Prevenir la Acción por Defecto de un Enlace</title>
-  </head>
-  <body>
-    <!-- Escribe tu codigo html aqui -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 13: Prevenir la Acción por Defecto de un Enlace</title>
+</head>
+<body>
+  
+  <a href="https://www.elwaje.com" id="miEnlace">Haz clic en mí, pero no te llevaré a ninguna parte.</a>
 
-    <script>
-      // Escribe tu codigo javascript aqui
-    </script>
-  </body>
+  <script>
+    
+    document.getElementById('miEnlace').addEventListener('click', function(evento) {
+      
+      evento.preventDefault();
+      alert('El comportamiento predeterminado del enlace ha sido prevenido.');
+    });
+  </script>
+</body>
 </html>

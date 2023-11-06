@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicio 14: Detener la Propagación de Evento</title>
-  </head>
-  <body>
-    <!-- Escribe tu codigo html aqui -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 14: Detener la Propagación de Evento</title>
+</head>
+<body>
+  
+  <div id="contenedor" style="padding:20px; border:1px solid #000;">
+    Haz clic en cualquier lugar en este contenedor.    
+    <button id="miBoton" style="margin-top:10px;">Haz clic en mí</button>
+  </div>
 
-    <script>
-      // Escribe tu codigo javascript aqui
-    </script>
-  </body>
+  <script>
+    
+    document.getElementById('contenedor').addEventListener('click', function() {
+      alert('Contenedor clickeado!');
+    });
+    
+    document.getElementById('miBoton').addEventListener('click', function(evento) {
+      
+      evento.stopPropagation();
+      alert('Botón clickeado! La propagación ha sido detenida.');
+    });
+  </script>
+</body>
 </html>

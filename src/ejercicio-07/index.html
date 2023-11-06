@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejercicio 7: Cambio de Atributos con `setAttribute`</title>
-  </head>
-  <body>
-    <!-- Escribe tu codigo html aqui -->
+</head>
+<body>
+
+    <a id="miEnlace" href="https://ejemplo.com">Visita Ejemplo.com</a>
 
     <script>
-      // Escribe tu codigo javascript aqui
+
+        var enlace = document.getElementById('miEnlace');
+
+        enlace.setAttribute('href', 'https://otroejemplo.com');
+
+        enlace.textContent = 'Visita OtroEjemplo.com';
     </script>
-  </body>
+
+</body>
 </html>
