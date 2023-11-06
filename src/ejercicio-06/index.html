@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejercicio 6: Cambio de Contenido con `innerHTML`</title>
-  </head>
-  <body>
-    <!-- Escribe tu codigo html aqui -->
+</head>
+<body>
+
+    <div id="contenido-dinamico">Texto original.</div>
 
     <script>
-      // Escribe tu codigo javascript aqui
+
+        var contenedor = document.getElementById('contenido-dinamico');
+        contenedor.innerHTML = 'Nuevo <strong>contenido HTML</strong> establecido con innerHTML.';
+    
     </script>
-  </body>
+    
+</body>
 </html>

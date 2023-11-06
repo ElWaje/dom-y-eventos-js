@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejercicio 5: Cambio de Contenido con `textContent`</title>
-  </head>
-  <body>
-    <!-- Escribe tu codigo html aqui -->
+</head>
+<body>
+  
+    <p id="parrafo">Texto original que será cambiado.</p>
 
     <script>
-      // Escribe tu codigo javascript aqui
+        var elemento = document.getElementById('parrafo');
+        elemento.textContent = 'Nuevo texto establecido con textContent.';
     </script>
-  </body>
+
+</body>
 </html>

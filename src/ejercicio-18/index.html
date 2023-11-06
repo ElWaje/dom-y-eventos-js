@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicio 18: Evento Personalizado y Disparo</title>
-  </head>
-  <body>
-    <!-- Escribe tu codigo html aqui -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 18: Evento Personalizado y Disparo</title>
+</head>
+<body>
+  
+  <button id="miBoton">Haz clic para disparar evento personalizado</button>
 
-    <script>
-      // Escribe tu codigo javascript aqui
-    </script>
-  </body>
+  <script>
+    
+    var boton = document.getElementById('miBoton');
+
+    var eventoEspecial = new Event('eventoEspecial');
+
+    boton.addEventListener('eventoEspecial', function() {
+      alert('¡Evento personalizado disparado!');
+    });
+
+    boton.addEventListener('click', function() {
+      
+      boton.dispatchEvent(eventoEspecial);
+    });
+
+  </script>
+  
+</body>
 </html>

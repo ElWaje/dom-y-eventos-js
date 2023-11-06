@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejercicio 3: Selección de Elementos con `querySelector`</title>
-  </head>
-  <body>
-    <!-- Escribe tu codigo html aqui -->
+</head>
+<body>
+  
+    <form id="mi-formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" value="">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="">
+
+        <input type="submit" value="Enviar">
+    </form>
 
     <script>
-      // Escribe tu codigo javascript aqui
+        
+        var campoNombre = document.querySelector('#nombre');
+        campoNombre.value = 'Enrique';
     </script>
-  </body>
+
+</body>
 </html>

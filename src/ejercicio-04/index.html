@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejercicio 4: Selección de Elementos con `querySelectorAll`</title>
-  </head>
-  <body>
-    <!-- Escribe tu codigo html aqui -->
+</head>
+<body>
+
+   
+    <img src="imagen1.jpg" alt="Imagen 1">
+    <img src="imagen2.jpg" alt="Imagen 2">
+    <img src="imagen3.jpg" alt="Imagen 3">
 
     <script>
-      // Escribe tu codigo javascript aqui
+        var imagenes = document.querySelectorAll('img');
+        imagenes.forEach(function(imagen) {
+            imagen.style.display = 'none';
+        });
     </script>
-  </body>
+
+</body>
 </html>

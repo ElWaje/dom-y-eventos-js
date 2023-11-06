@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejercicio 2: Selección de Elementos por Clase</title>
-  </head>
-  <body>
-    <!-- Escribe tu codigo html aqui -->
+    <style>
+        .mi-clase {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
 
-    <script>
-      // Escribe tu codigo javascript aqui
+    <p class="mi-clase">Elemento 1 con clase "mi-clase".</p>
+    <div class="mi-clase">Elemento 2 con clase "mi-clase".</div>
+    <span class="mi-clase">Elemento 3 con clase "mi-clase".</span>
+
+    <script>        
+        var elementos = document.getElementsByClassName('mi-clase');                
+        for (var i = 0; i < elementos.length; i++) {
+            elementos[i].style.color = 'red';
+            elementos[i].style.fontWeight = 'bold'; 
+        }
     </script>
-  </body>
+
+</body>
 </html>

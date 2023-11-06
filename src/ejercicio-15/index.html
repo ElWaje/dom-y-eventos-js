@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicio 15: Delegación de Eventos</title>
-  </head>
-  <body>
-    <!-- Escribe tu codigo html aqui -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 15: Delegación de Eventos</title>
+</head>
+<body>
+  
+  <ul id="listaElementos">
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+    <li>Elemento 3</li>
+    <li>Elemento 4</li>
+    <li>Elemento 5</li>
+  </ul>
 
-    <script>
-      // Escribe tu codigo javascript aqui
-    </script>
-  </body>
+  <script>
+    
+    var lista = document.getElementById('listaElementos');
+    
+    lista.addEventListener('click', function(evento) {
+      
+      if(evento.target.tagName === 'LI') {
+        alert('Hiciste clic en ' + evento.target.textContent);
+      }
+    });
+  </script>
+</body>
 </html>

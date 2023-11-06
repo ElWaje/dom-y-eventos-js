@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicio 11: Eliminar Elemento con `removeChild`</title>
-  </head>
-  <body>
-    <!-- Escribe tu codigo html aqui -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 11: Eliminar Elemento con `removeChild`</title>
+</head>
+<body>
+  
+  <div id="contenedor">
+    <p id="parrafoEliminar">Este párrafo será eliminado.</p>
+    
+  </div>
 
-    <script>
-      // Escribe tu codigo javascript aqui
-    </script>
-  </body>
+  <script>
+    
+    var contenedor = document.getElementById('contenedor');
+
+    var parrafoEliminar = document.getElementById('parrafoEliminar');
+    
+    contenedor.removeChild(parrafoEliminar);
+
+  </script>
+</body>
 </html>

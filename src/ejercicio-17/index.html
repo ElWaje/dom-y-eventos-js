@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicio 17: Manejo de Evento de Carga de Imagen</title>
-  </head>
-  <body>
-    <!-- Escribe tu codigo html aqui -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 17: Manejo de Evento de Carga de Imagen</title>
+</head>
+<body>
 
-    <script>
-      // Escribe tu codigo javascript aqui
-    </script>
-  </body>
+  <img id="imagenCargada" src="imagen.jpg" alt="Descripción de la imagen">
+
+  <script>
+    
+    var imagen = document.getElementById('imagenCargada');
+
+    function imagenCargada() {
+      alert('La imagen se ha cargado correctamente.');
+    }
+
+    imagen.addEventListener('load', imagenCargada);
+
+  </script>
+</body>
 </html>
